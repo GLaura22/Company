@@ -2,7 +2,34 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Notes.MainPage">
-			 
-   
- 
+
+    <VerticalStackLayout Margin="30,60,30,30">
+        <Label Text="Feljegyzesek"
+               FontSize="Large"
+               HorizontalOptions="Center"
+               FontAttributes="Bold, Italic" />
+
+        <Label Text="proba"
+               TextColor="BlueViolet"
+               FontSize="Subtitle"
+               LineHeight="1"/>
+        <Label Text="proba"
+               TextColor="BlueViolet"
+               FontSize="Subtitle"
+               LineHeight="3"/>
+        <Editor x:Name="editor"
+                Placeholder="Ide irj megjegyzest..."
+                HeightRequest="100" />
+        <Grid ColumnDefinitions="Auto, 30, Auto">
+            <Button Grid.Column="0"
+                    Text="Mentes" 
+                    WidthRequest="150"
+                    Clicked="OnSaveButtonClicked" />
+            <Button Grid.Column="2"
+                    Text="Torles" 
+                     WidthRequest="150"
+                    Clicked="OnDeleteButtonClicked" />
+        </Grid>
+    </VerticalStackLayout>
+
 </ContentPage>
